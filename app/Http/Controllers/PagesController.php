@@ -8,6 +8,6 @@ class PagesController extends Controller
 {
     public function display()
     {
-        return view('page.display', compact('display'));
+        return view('page.display');
     }
 }
