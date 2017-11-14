@@ -13,3 +13,8 @@
 
 Route::get('/', 'WelcomeController@index');
 Route::get('/lang/{lang}{route?}', 'LangController@index');
+
+Route::prefix('api/v1', function(){
+    Route::get('/teacher/get/', 'TeacherController@get');
+    Route::post('/teacher/post/{fname?}{mname?}{lname?}{phonenumber?}', 'TeacherController@post');
+});

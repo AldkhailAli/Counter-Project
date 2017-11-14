@@ -9,7 +9,7 @@ class TeacherController extends Controller
 {
     public function get()
     {
-        if($id == null) return response(405);
+        if($id == null) return response()->json(Teacher::all());
         $teacher = Teacher::find($id);
         if($teacher == null) return response(404);
         return response()->json($teacher);
