@@ -30,6 +30,7 @@
 	  <div class="w3-container">
 	    <h1>Queue Managment System</h1>
 		</div>
+		@yield('content')
 	</div>
     </body>
 </html>
