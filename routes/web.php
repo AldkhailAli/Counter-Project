@@ -14,6 +14,8 @@
 Route::get('/', 'WelcomeController@index');
 Route::get('/teachers', 'TeacherController@index');
 Route::get('/display', 'PagesController@display');
+Route::get('/dispenser', 'PagesController@dispenser');
+Route::get('/queue', 'PagesController@queue');
 Route::get('/lang/{lang}{route?}', 'LangController@index');
 
 Route::prefix('api/v1', function(){

@@ -10,4 +10,14 @@ class PagesController extends Controller
     {
         return view('page.display');
     }
+
+        public function dispenser()
+    {
+        return view('page.dispenser');
+    }
+    
+        public function queue()
+    {
+        return view('page.queue');
+    }
 }
