@@ -7,7 +7,7 @@ use Session;
 
 class LangController extends Controller
 {
-    public function lang($lang, $route)
+    public function index($lang, $route)
     {
         Session::put('lang', $lang);
         app()->setLocale($lang);
