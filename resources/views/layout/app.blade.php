@@ -24,7 +24,6 @@
 
 <!-- Page Content -->
 <div zclass="w3-main" id="main">
-
 	<div class="w3-teal">
 	  <button class="w3-button w3-teal w3-xlarge" id="sidebar-toggle">&#9776;</button>
 		<button class="w3-button w3-teal w3-large" id="logoutbtn" style="float: right; margin:15px">Log out</button>
