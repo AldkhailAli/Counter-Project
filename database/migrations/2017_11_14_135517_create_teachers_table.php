@@ -18,10 +18,11 @@ class CreateTeachersTable extends Migration
             $table->string('firstname');
             $table->string('middlename');
             $table->string('lastname');
-            $table->integer('done');
-            $table->integer('now');
-            $table->json('queue');
-            $table->json('skip');
+            $table->string('phonenumber');
+            $table->integer('done')->nullable();
+            $table->integer('now')->nullable();
+            $table->json('queue')->nullable();
+            $table->json('skip')->nullable();
             $table->timestamps();
         });
     }
