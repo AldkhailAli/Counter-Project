@@ -7,9 +7,16 @@ use App\Teacher;
 
 class TeacherController extends Controller
 {
+
+    public function index()
+    {
+        $teachers = Teacher::all();
+        return view('page.teachers', compact('teachers'));
+    }
+
     public function get()
     {
-`````````````````````````````````        if($id == null) return response()->json(Teacher::all());
+        if($id == null) return response()->json(Teacher::all());
         $teacher = Teacher::find($id);
         if($teacher == null) return response(404);
         return response()->json($teacher);
