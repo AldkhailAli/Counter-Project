@@ -30,15 +30,19 @@
 			    </thead>
 			    @if ($tickets != null)
 						@if ($tickets->count() < 1)
-							<tr><td>1</td><td>0000</td><td>Unknown</td><td>1 min</td></tr>
+							<tr><td>1</td><td>0000</td><td>1 min</td><td>Unknown</td></tr>
 						@else
 							@foreach($tickets as $ticket)
+<<<<<<< HEAD
 								{{ $teacher = Teacher::find($ticket->teacher) }}
 								<tr><td>1</td><td>0001</td><td><?php echo $teacher->firstname.$teacher->middlename.$teacher->lastname; ?></td><td>1 min</td></tr>
+=======
+								<tr><td>1</td><td>0001</td><td>1 min</td><td>Abdullah</td></tr>
+>>>>>>> b70de9fd464e0b28c1f82de0c896b5cf7d114f27
 							@endforeach
 						@endif
 					@else
-						<tr><td>1</td><td>0000</td><td>Unknown</td><td>1 min</td></tr>
+						<tr><td>1</td><td>0000</td><td>1 min</td><td>Unknown</td></tr>
 					@endif
 			  </table>
 		  </div>
