@@ -49,6 +49,5 @@ class Admin extends Command
         $admin->password = $password;
         $admin->save();
         $this->info('The new admin password: '.$password);
-        
     }
 }
