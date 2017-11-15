@@ -18,11 +18,11 @@ Route::get('/dispenser', 'PagesController@dispenser');
 Route::get('/queue', 'PagesController@queue');
 Route::get('/lang/{lang}{route?}', 'LangController@index');
 
-Route::prefix('admin', function(){
+Route::prefix('admin')->group(function(){
     Route::get('login', 'PagesController@login');
 });
 
-Route::prefix('api/v1', function(){
+Route::prefix('api/v1')->group(function(){
     
     Route::prefix('teacher', function(){
         Route::get('get/', 'TeacherController@get');

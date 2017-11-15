@@ -19,6 +19,7 @@ class CreateTeachersTable extends Migration
             $table->string('middlename');
             $table->string('lastname');
             $table->string('phonenumber');
+            $table->string('password');
             $table->integer('done')->nullable();
             $table->integer('now')->nullable();
             $table->json('queue')->nullable();

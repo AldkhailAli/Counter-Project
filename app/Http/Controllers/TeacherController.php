@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Teacher;
+use Webpatser\Uuid\Uuid as UUID;
 
 class TeacherController extends Controller
 {
@@ -35,6 +36,7 @@ class TeacherController extends Controller
         $teacher->middlename = $name['middle'];
         $teacher->lastname = $name['last'];
         $teacher->phonenumber = $phonenumber;
+        $teacher->password = substr((string)UUID::generate(4), 20);
         $teacher->save();
         return $teacher;
     }
