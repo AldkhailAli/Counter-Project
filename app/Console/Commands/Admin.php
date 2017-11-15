@@ -39,10 +39,10 @@ class Admin extends Command
      */
     public function handle()
     {
-        $admin = AdminPassword::find(0);
+        $admin = AdminPassword::find(1);
         if($admin == null) {
             $admin = new AdminPassword;
-            $admin->id = 0;
+            $admin->id = 1;
         }
         $password = (string)UUID::generate(4);
         $password = str_replace("-", "", $password);

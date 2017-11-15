@@ -14,11 +14,10 @@ class AdminController extends Controller
     */
     public function login(Request $req)
     {
-        dd($req);
         $username = $req->input('username'); $password = $req->input('password');
         if($password == null) return response(405); // if the request doesn't have password
         if($username != "iHDeveloper" && $username != "AliMd") return response(201); // the username is not match then what we know
-        $admin = AdminPassword::find(0); // find the admin with id 0 ( no more than that)
+        $admin = AdminPassword::find(1); // find the admin with id 0 ( no more than that)
         if($admin == null) { // if there's not any admin
             $admin = new AdminPassword; // create new admin
             $admin->id = 0; // set the id to 0
