@@ -31,24 +31,46 @@ class AdminController extends Controller
         return response(200); // response with successfully
     }
     
-    public function call(){ // call the next ticket of the teacher
+    public function call($id){ // call the next ticket of the teacher
+        $teacher = teacherExist($id); // call the teacher exist with enter the id parm
+        if($teacher == null) return response(404); // if not found the teacher then response 404
         return; // empty function
     }
     
-    public function recall(){ // re call the ticket of the teacher
+    public function recall($id){ // re call the ticket of the teacher
+        $teacher = teacherExist($id); // call the teacher exist with enter the id parm
+        if($teacher == null) return response(404); // if not found the teacher then response 404
         return; // empty function
     }
     
-    public function skip(){ // skip the ticket of the teacher
+    public function skip($id){ // skip the ticket of the teacher
+        $teacher = teacherExist($id); // call the teacher exist with enter the id parm
+        if($teacher == null) return response(404); // if not found the teacher then response 404
         return; // empty function
     }
     
     public function done(){ // done the ticket of the teacher
+        $teacher = teacherExist($id); // call the teacher exist with enter the id parm
+        if($teacher == null) return response(404); // if not found the teacher then response 404
+        $now = $teacher->now; // call the now parm in the teacher object
+        $done = json_decode($teacher->done, true); // call the done array and decode it by json
+        array_push($done, $now); // push the now parm of the teacher object into the done array
+        $teacher->done = json_encode($done);
+        // TODO continue the function
         return; // empty function
     }
     
     public function now(){ // get the ticket of the teacher for now
-        return; // empty function
+        $teacher = teacherExist($id); // call the teacher exist with enter the id parm
+        if($teacher == null) return response(404); // if not found the teacher then response 404
+        $now = $teacher->now; // call the now parm in the teacher
+        return response()->json($now); // return the now parm from the teacher
+    }
+    
+    private function teacherExist($id){ // check if the teacher exist or no then return it
+       $teacher = Teacher::find($id); // get the teacher by the id
+       if($teacher == null) return null; // if the teacher object is empty then return nothing
+       return $teacher; // if the teacher found then return teacher object
     }
     
 }
