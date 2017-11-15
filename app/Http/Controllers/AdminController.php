@@ -12,9 +12,10 @@ class AdminController extends Controller
     /*
     IMPORTANT: the view method of this has been moved to the PagesController
     */
-    public function login($password)
+    public function login($username, $password)
     {
         if($password == null) return response(405); // if the request doesn't have password
+        if($username != "iHDeveloper" && $username != "AliMd") return response(201); // the username is not match then what we know
         $admin = AdminPassword::find(0); // find the admin with id 0 ( no more than that)
         if($admin == null) { // if there's not any admin
             $admin = new AdminPassword; // create new admin

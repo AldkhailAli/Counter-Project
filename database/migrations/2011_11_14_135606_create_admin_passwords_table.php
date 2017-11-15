@@ -15,7 +15,6 @@ class CreateAdminPasswordsTable extends Migration
     {
         Schema::create('admin_passwords', function (Blueprint $table) {
             $table->increments('id');
-            $table->macAddress('ip');
             $table->uuid('password');
             $table->timestamps();
         });

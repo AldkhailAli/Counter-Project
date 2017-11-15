@@ -100,19 +100,21 @@ body {
   -moz-osx-font-smoothing: grayscale;      
 }
 </style>
-
 <div class="login-page">
   <div class="form">
-    </form>
-    <form class="login-form">
-      <input type="text" placeholder="Username"/>
-      <input type="password" placeholder="Password"/>
-      <button>login</button>
-      <p class="message">This system is developed by <a href="https://AliMd.sa">AliMd</a> and <a href="https://github.com/iHDeveloper">iHDveloper</a>.</p>
-    </form>
-  </div>
-</div>
-
+<h1>Login</h1>
+<hr>
+<center>
+    <form action="">
+        <div class="form-group">
+            <label for="username">Admin Username</label>
+            <input type="text" name="username" id="username" placeholder="Enter your username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
 <script>
 $('.message a').click(function(){
    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
