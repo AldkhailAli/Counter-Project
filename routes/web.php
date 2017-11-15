@@ -24,12 +24,12 @@ Route::prefix('admin')->group(function(){
 
 Route::prefix('api/v1')->group(function(){
     
-    Route::prefix('teacher', function(){
+    Route::prefix('teacher')->group(function(){
         Route::get('get/', 'TeacherController@get');
         Route::post('post/{fname?}{mname?}{lname?}{phonenumber?}', 'TeacherController@post');
     });
-    Route::prefix('admin', function(){
-        Route::get('login/{username?}{password?}', 'AdminController@login');
+    Route::prefix('admin')->group(function(){
+        Route::post('login/{username?}{password?}', 'AdminController@login');
         Route::get('call', 'AdminController@call');
         Route::get('recall', 'AdminController@recall');
         Route::get('done', 'AdminController@done');

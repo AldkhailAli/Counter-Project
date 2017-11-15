@@ -1,5 +1,5 @@
 <style>
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
 
 .login-page {
   width: 360px;
@@ -105,7 +105,7 @@ body {
 <h1>Login</h1>
 <hr>
 <center>
-    <form action="">
+    <form action="{{ url('api/v1/admin/login') }}" method="POST">
         <div class="form-group">
             <label for="username">Admin Username</label>
             <input type="text" name="username" id="username" placeholder="Enter your username">
@@ -114,7 +114,9 @@ body {
             <label for="password">Password</label>
             <input type="password" name="password" id="password" placeholder="Enter your password">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+    </form>
 <script>
 $('.message a').click(function(){
    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
