@@ -27,7 +27,6 @@
 			        <th>Teacher</th>
 			      </tr>
 			    </thead>
-<<<<<<< HEAD
 			    @if ($tickets != null)
 						@if ($tickets->count() < 1)
 							<tr><td>1</td><td>0000</td><td>Unknown</td><td>1 min</td></tr>
@@ -39,13 +38,6 @@
 					@else
 						<tr><td>1</td><td>0000</td><td>Unknown</td><td>1 min</td></tr>
 					@endif
-=======
-			    
-			    <tr><td>2</td><td>0002</td><td>2 min</td><td>Khalded</td></tr>
-					<tr><td>3</td><td>0003</td><td>3 min</td><td>Ahamd</td></tr>
-					<tr><td>4</td><td>0004</td><td>4 min</td><td>Hasan</td></tr>
-					<tr><td>5</td><td>0005</td><td>5 min</td><td>Ali</td></tr>
->>>>>>> a34ab9365d450caa5d70e4e07ef2d24a3f354d86
 			  </table>
 		  </div>
 		</div>
