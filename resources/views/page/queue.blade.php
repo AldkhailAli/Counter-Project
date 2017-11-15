@@ -1,5 +1,7 @@
 @extends('layout.app')
 
+<?php use App\Teacher; ?>
+
 @section('content')
 	<!-- Queue Table -->
 	<div class="w3-container" id="queue-table">
@@ -31,7 +33,8 @@
 							<tr><td>1</td><td>0000</td><td>Unknown</td><td>1 min</td></tr>
 						@else
 							@foreach($tickets as $ticket)
-								<tr><td>1</td><td>0001</td><td>Abdullah</td><td>1 min</td></tr>
+								{{ $teacher = Teacher::find($ticket->teacher) }}
+								<tr><td>1</td><td>0001</td><td><?php echo $teacher->firstname.$teacher->middlename.$teacher->lastname; ?></td><td>1 min</td></tr>
 							@endforeach
 						@endif
 					@else
