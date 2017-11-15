@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Ticket;
 
 class PagesController extends Controller
 {
@@ -18,7 +19,8 @@ class PagesController extends Controller
     
     public function queue() // the page who the admin can controll and know what's going on on it
     {
-        return view('page.queue'); // return with the queue page in page folder in resource
+        $tickets = Ticket::all();
+        return view('page.queue', compact('tickets')); // return with the queue page in page folder in resource
     }
     
     public function login(){ // the page who the admin can access to his account so easily
