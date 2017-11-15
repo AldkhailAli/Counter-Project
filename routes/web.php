@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-Route::get('/teachers', 'TeacherController@index');
-Route::get('/display', 'PagesController@display');
-Route::get('/dispenser', 'PagesController@dispenser');
-Route::get('/queue', 'PagesController@queue');
+Route::get('/', 'WelcomeController@index')->name('welcome');
+Route::get('/teachers', 'TeacherController@index')->name('teachers');
+Route::get('/display', 'PagesController@display')->name('display');
+Route::get('/dispenser', 'PagesController@dispenser')->name('dispenser');
+Route::get('/queue', 'PagesController@queue')->name('queue');
 Route::get('/lang/{lang}{route?}', 'LangController@index');
 
 Route::prefix('admin')->group(function(){

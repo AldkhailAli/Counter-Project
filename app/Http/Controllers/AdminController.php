@@ -30,7 +30,7 @@ class AdminController extends Controller
             Session::put('isAdmin', false); // put the isAdmin to false because he isn't the admin
             return response(202); // response with auth required
         }
-        return response(200); // response with successfully
+        return redirect()->route('welcome'); // response with successfully
     }
     
     public function call($id){ // call the next ticket of the teacher

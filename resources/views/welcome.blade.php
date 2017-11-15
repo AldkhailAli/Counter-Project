@@ -82,6 +82,21 @@
                     {{ env('APP_NAME') }}
                     <p>by <a href="https://AliMd.sa">AliMd</a> and <a href="https://github.com/iHDeveloper">iHDeveloper</a>.</p>
                 </div>
+                <div class="links">
+                    <a herf="{{ route('display') }}">Display</a>
+                    <a herf="{{ route('dispenser') }}">Dispenser</a>
+                    <a herf="{{ route('queue') }}">Queue</a>
+                </div>
+                
+                @if(Session::has('isAdmin'))
+                    @if(Session::get('isAdmin'))
+                        Hello Admin
+                    @else
+                        Hello Guest
+                    @endif
+                @else
+                    Hello Guest
+                @endif
             </div>
         </div>
     </body>
