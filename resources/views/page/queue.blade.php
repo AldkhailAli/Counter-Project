@@ -28,11 +28,17 @@
 			        <th>Estimated Waiting Time</th>
 			      </tr>
 			    </thead>
-			    <tr><td>1</td><td>0001</td><td>1 min</td></tr>
-			    <tr><td>2</td><td>0002</td><td>2 min</td></tr>
-					<tr><td>3</td><td>0003</td><td>3 min</td></tr>
-					<tr><td>4</td><td>0004</td><td>4 min</td></tr>
-					<tr><td>5</td><td>0005</td><td>5 min</td></tr>
+			    @if ($tickets != null)
+						@if ($tickets->count() < 1)
+							<tr><td>1</td><td>0000</td><td>0 min</td></tr>
+						@else
+							@foreach($tickets as $ticket)
+								<tr><td>2</td><td>0002</td><td>2 min</td></tr>
+							@endforeach
+						@endif
+					@else
+						<tr><td>1</td><td>0000</td><td>0 min</td></tr>
+					@endif
 			  </table>
 		  </div>
 		</div>
