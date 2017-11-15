@@ -30,14 +30,14 @@
 <<<<<<< HEAD
 			    @if ($tickets != null)
 						@if ($tickets->count() < 1)
-							<tr><td>1</td><td>0000</td><td>1 min</td><td>Unknown</td></tr>
+							<tr><td>1</td><td>0000</td><td>Unknown</td><td>1 min</td></tr>
 						@else
 							@foreach($tickets as $ticket)
-								<tr><td>1</td><td>0001</td><td>1 min</td><td>Abdullah</td></tr>
+								<tr><td>1</td><td>0001</td><td>Abdullah</td><td>1 min</td></tr>
 							@endforeach
 						@endif
 					@else
-						<tr><td>1</td><td>0000</td><td>1 min</td><td>Unknown</td></tr>
+						<tr><td>1</td><td>0000</td><td>Unknown</td><td>1 min</td></tr>
 					@endif
 =======
 			    
