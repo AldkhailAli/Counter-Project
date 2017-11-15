@@ -87,7 +87,6 @@
                     <a herf="{{ route('dispenser') }}">Dispenser</a>
                     <a herf="{{ route('queue') }}">Queue</a>
                 </div>
-                
                 @if(Session::has('isAdmin'))
                     @if(Session::get('isAdmin'))
                         Hello Admin
