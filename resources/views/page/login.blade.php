@@ -13,7 +13,6 @@
         <div class="form-group">
             <label for="password">Password</label>
             <input type="password" name="password" id="password" placeholder="Enter your password">
-            <small id="emailHelp" class="form-text text-muted">Don't share this with anyone</small>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

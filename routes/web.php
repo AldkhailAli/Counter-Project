@@ -29,7 +29,7 @@ Route::prefix('api/v1')->group(function(){
         Route::post('post/{fname?}{mname?}{lname?}{phonenumber?}', 'TeacherController@post');
     });
     Route::prefix('admin', function(){
-        Route::get('login', 'AdminController@login');
+        Route::get('login/{username?}{password?}', 'AdminController@login');
         Route::get('call', 'AdminController@call');
         Route::get('recall', 'AdminController@recall');
         Route::get('done', 'AdminController@done');
