@@ -1,13 +1,12 @@
 @extends('layout.app')
 
 @section('content')
-
 	<!-- Queue Table -->
 	<div class="w3-container" id="queue-table">
 	  <h2>Queue List</h2>
 
 		<div style="margin:10px; float:left;">
-			<div class="w3-bar w3-black">
+		<!--	<div class="w3-bar w3-black">
 		    <button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event,'London')">Counter1</button>
 		    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Paris')">Counter2</button>
 		    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Counter3</button>
@@ -15,7 +14,7 @@
 		    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Counter5</button>
 		    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Counter6</button>
 		    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Counter7</button>
-		  </div>
+		  </div>-->
 
 	  	<div id="table" class="w3-container w3-border city">
 				<table class="w3-table w3-bordered w3-hoverable" >
