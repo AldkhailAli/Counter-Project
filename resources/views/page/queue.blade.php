@@ -2,21 +2,19 @@
 
 @section('content')
 
-<!-- Queue Table -->
+	<!-- Queue Table -->
 	<div class="w3-container" id="queue-table">
 	  <h2>Queue List</h2>
 
 		<div style="margin:10px; float:left;">
 			<div class="w3-bar w3-black">
-		<div class="dropdown">
-		<button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  	<div id="myDropdown" class="dropdown-content">
-    <a href="#Teacher-1">Teacher 1</a>
-    <a href="#Teacher-2">Teacher 2</a>
-    <a href="#Teacher-3">Teacher 3</a>
-  </div>
-</div>
-
+		    <button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event,'London')">Counter1</button>
+		    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Paris')">Counter2</button>
+		    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Counter3</button>
+		    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Counter4</button>
+		    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Counter5</button>
+		    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Counter6</button>
+		    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Counter7</button>
 		  </div>
 
 	  	<div id="table" class="w3-container w3-border city">
@@ -26,13 +24,14 @@
 							<th>No.</th>
 			        <th>Ticket Number</th>
 			        <th>Estimated Waiting Time</th>
+			        <th>Teacher</th>
 			      </tr>
 			    </thead>
-			    <tr><td>1</td><td>0001</td><td>1 min</td></tr>
-			    <tr><td>2</td><td>0002</td><td>2 min</td></tr>
-					<tr><td>3</td><td>0003</td><td>3 min</td></tr>
-					<tr><td>4</td><td>0004</td><td>4 min</td></tr>
-					<tr><td>5</td><td>0005</td><td>5 min</td></tr>
+			    <tr><td>1</td><td>0001</td><td>1 min</td><td>Abdullah</td></tr>
+			    <tr><td>2</td><td>0002</td><td>2 min</td><td>Khalded</td></tr>
+					<tr><td>3</td><td>0003</td><td>3 min</td><td>Ahamd</td></tr>
+					<tr><td>4</td><td>0004</td><td>4 min</td><td>Hasan</td></tr>
+					<tr><td>5</td><td>0005</td><td>5 min</td><td>Ali</td></tr>
 			  </table>
 		  </div>
 		</div>
