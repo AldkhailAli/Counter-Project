@@ -33,12 +33,8 @@
 							<tr><td>1</td><td>0000</td><td>1 min</td><td>Unknown</td></tr>
 						@else
 							@foreach($tickets as $ticket)
-<<<<<<< HEAD
 								{{ $teacher = Teacher::find($ticket->teacher) }}
 								<tr><td>1</td><td>0001</td><td><?php echo $teacher->firstname.$teacher->middlename.$teacher->lastname; ?></td><td>1 min</td></tr>
-=======
-								<tr><td>1</td><td>0001</td><td>1 min</td><td>Abdullah</td></tr>
->>>>>>> b70de9fd464e0b28c1f82de0c896b5cf7d114f27
 							@endforeach
 						@endif
 					@else
@@ -54,12 +50,27 @@
 				<p class="w3-jumbo w3-center">0000</p>
 			</div>
 			<div>
-				<button class="w3-btn w3-green w3-round-large w3-xxlarge w3-hover-grey" id="callbtn" style="margin:5px">Call Next</button>
-				<button class="w3-btn w3-lime w3-round-large w3-xxlarge w3-hover-grey" id="donebtn" style="margin:5px">Done</button>
+			
+
+			<form action="/next" method="get" id="callbtn">
+			</form>
+			<button form="callbtn" class="w3-btn w3-green w3-round-large w3-xxlarge w3-hover-grey" id="callbtn" style="margin:5px">Call Next</button>
+
+
+			<form action="/done" method="get" id="donebtn">
+			</form>
+			<button form="donebtn" class="w3-btn w3-lime w3-round-large w3-xxlarge w3-hover-grey" id="donebtn" style="margin:5px">Done</button>
+
+
 			</div>
 			<div>
-				<button class="w3-btn w3-green w3-round-large w3-xlarge w3-hover-grey" id="recallbtn" style="margin:5px">Recall</button>
-				<button class="w3-btn w3-red w3-round-large w3-xlarge w3-hover-grey" id="skipbtn" style="margin:5px">Skip</button>
+			<form action="/recall" method="get" id="recallbtn">
+			</form>
+				<button form="recallbtn" class="w3-btn w3-green w3-round-large w3-xlarge w3-hover-grey" id="recallbtn" style="margin:5px">Recall</button>
+
+			<form action="/skip" method="get" id="skipbtn">
+			</form>
+				<button form="skipbtn" class="w3-btn w3-red w3-round-large w3-xlarge w3-hover-grey" id="skipbtn" style="margin:5px">Skip</button>
 			</div>
 		</div>
 	</div>
