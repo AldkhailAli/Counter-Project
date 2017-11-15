@@ -45,6 +45,7 @@ class Admin extends Command
             $admin->id = 0;
         }
         $password = (string)UUID::generate(4);
+        $password = str_replace("-", "", $password);
         $admin->password = $password;
         $this->info('The new admin password: '.$password);
         
