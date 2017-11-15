@@ -6,18 +6,23 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    public function display()
+    public function display() // the page who the customers can see what's going on
     {
-        return view('page.display');
+        return view('page.display'); // return with the display page in page folder in resource
     }
 
-        public function dispenser()
+    public function dispenser() // the page who the customers can take tickets for them
     {
-        return view('page.dispenser');
+        return view('page.dispenser'); // return with the dispenser page in page folder in resource
     }
     
-        public function queue()
+    public function queue() // the page who the admin can controll and know what's going on on it
     {
-        return view('page.queue');
+        return view('page.queue'); // return with the queue page in page folder in resource
     }
+    
+    public function login(){ // the page who the admin can access to his account so easily
+        return view('page.login'); // return the login page in page folder in resource
+    }
+    
 }
