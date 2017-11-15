@@ -31,19 +31,23 @@ class AdminController extends Controller
         return response(200); // response with successfully
     }
     
-    public function callNext(){
+    public function call(){ // call the next ticket of the teacher
         return; // empty function
     }
     
-    public function reCall(){
+    public function recall(){ // re call the ticket of the teacher
         return; // empty function
     }
     
-    public function skip(){
+    public function skip(){ // skip the ticket of the teacher
         return; // empty function
     }
     
-    public function done(){
+    public function done(){ // done the ticket of the teacher
+        return; // empty function
+    }
+    
+    public function now(){ // get the ticket of the teacher for now
         return; // empty function
     }
     
